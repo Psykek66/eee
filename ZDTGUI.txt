@@ -1,0 +1,1935 @@
+-- Gui to Lua
+-- Version: 3.2
+--------------------- Dying resets the GUI. Pretty sure it's because I can't add the GUI to CoreGui in the game, but idk. ---------------------
+--------------------- Made by Psykek#3180 ---------------------
+-- Instances:
+
+local ZDTGUI = Instance.new("ScreenGui")
+local Topframe = Instance.new("Frame")
+local WeaponsFrame = Instance.new("Frame")
+local WeaponsTitle = Instance.new("TextLabel")
+local GunsSubframe = Instance.new("ScrollingFrame")
+local Minigun = Instance.new("TextButton")
+local PlasmaEvo = Instance.new("TextButton")
+local CyberSniper = Instance.new("TextButton")
+local AK47 = Instance.new("TextButton")
+local Witness = Instance.new("TextButton")
+local Glock = Instance.new("TextButton")
+local PlasmaDeagle = Instance.new("TextButton")
+local Revolver = Instance.new("TextButton")
+local TacticalPistol = Instance.new("TextButton")
+local Skorpion = Instance.new("TextButton")
+local P90 = Instance.new("TextButton")
+local TommyGun = Instance.new("TextButton")
+local Aug = Instance.new("TextButton")
+local M16a4 = Instance.new("TextButton")
+local Famas = Instance.new("TextButton")
+local DoubleBarrel = Instance.new("TextButton")
+local SlugShotgun = Instance.new("TextButton")
+local Flamespitter = Instance.new("TextButton")
+local NinjaStars = Instance.new("TextButton")
+local MeleeSubframe = Instance.new("ScrollingFrame")
+local Stick = Instance.new("TextButton")
+local Bat = Instance.new("TextButton")
+local DemolitionHammer = Instance.new("TextButton")
+local BlueLightsaber = Instance.new("TextButton")
+local Wrench = Instance.new("TextButton")
+local RedLightsaber = Instance.new("TextButton")
+local BigHammer = Instance.new("TextButton")
+local Pick = Instance.new("TextButton")
+local Pipe = Instance.new("TextButton")
+local Machete = Instance.new("TextButton")
+local Sickle = Instance.new("TextButton")
+local Katana = Instance.new("TextButton")
+local Chainsaw = Instance.new("TextButton")
+local Axe = Instance.new("TextButton")
+local BatWithNails = Instance.new("TextButton")
+local Knife = Instance.new("TextButton")
+local CloseBtn = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local DesignFull = Instance.new("TextButton")
+local NavFrame = Instance.new("Frame")
+local WeaponTab = Instance.new("TextButton")
+local TurretTab = Instance.new("TextButton")
+local DefenseTab = Instance.new("TextButton")
+local OtherFunctionsTab = Instance.new("TextButton")
+local TeleportsTab = Instance.new("TextButton")
+local TurretFrame = Instance.new("Frame")
+local TurretWaitBox = Instance.new("TextBox")
+local CrossbowTurret = Instance.new("TextButton")
+local BasicTurret = Instance.new("TextButton")
+local AdvancedTurret = Instance.new("TextButton")
+local Rocket2 = Instance.new("TextButton")
+local MinigunTurret = Instance.new("TextButton")
+local Rocket1 = Instance.new("TextButton")
+local GhostTurret = Instance.new("TextButton")
+local CyberTurret = Instance.new("TextButton")
+local HalloweenTurret = Instance.new("TextButton")
+local DefenseFrame = Instance.new("Frame")
+local DefenseWaitBox = Instance.new("TextBox")
+local TireBarricade = Instance.new("TextButton")
+local WoodBarricade = Instance.new("TextButton")
+local SandbagBarricade = Instance.new("TextButton")
+local TowerBarricade = Instance.new("TextButton")
+local MetalBarricade = Instance.new("TextButton")
+local SpikeBarricade = Instance.new("TextButton")
+local CyberBarricade = Instance.new("TextButton")
+local OtherFunctionsFrame = Instance.new("Frame")
+local ATV = Instance.new("TextButton")
+local Pickup = Instance.new("TextButton")
+local Humvee = Instance.new("TextButton")
+local AquaModzGUI = Instance.new("TextButton")
+local UnlockAllMelee = Instance.new("TextButton")
+local GooFarm = Instance.new("TextButton")
+local LagServer = Instance.new("TextButton")
+local Glow = Instance.new("TextButton")
+local TeleportsFrame = Instance.new("Frame")
+local Base1TP = Instance.new("TextButton")
+local Base2TP = Instance.new("TextButton")
+local Base3TP = Instance.new("TextButton")
+local Base6TP = Instance.new("TextButton")
+local Base5TP = Instance.new("TextButton")
+local Base4TP = Instance.new("TextButton")
+local Cave4TP = Instance.new("TextButton")
+local Cave3TP = Instance.new("TextButton")
+local Cave2TP = Instance.new("TextButton")
+local Base7TP = Instance.new("TextButton")
+local CenterTP = Instance.new("TextButton")
+local Cave1TP = Instance.new("TextButton")
+local InfoFrame = Instance.new("Frame")
+local JoinGame = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ZDTGUI.Name = "ZDTGUI"
+ZDTGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ZDTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Topframe.Name = "Topframe"
+Topframe.Parent = ZDTGUI
+Topframe.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Topframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Topframe.BorderSizePixel = 0
+Topframe.Position = UDim2.new(0.190610334, 0, 0.290502787, 0)
+Topframe.Size = UDim2.new(0, 273, 0, 29)
+Topframe.Active = true
+Topframe.Draggable = true
+
+WeaponsFrame.Name = "WeaponsFrame"
+WeaponsFrame.Parent = Topframe
+WeaponsFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+WeaponsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WeaponsFrame.BorderSizePixel = 0
+WeaponsFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+WeaponsFrame.Size = UDim2.new(0, 273, 0, 164)
+WeaponsFrame.Visible = false
+
+WeaponsTitle.Name = "WeaponsTitle"
+WeaponsTitle.Parent = WeaponsFrame
+WeaponsTitle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+WeaponsTitle.BorderSizePixel = 0
+WeaponsTitle.Position = UDim2.new(0.300366312, 0, 0.0426829271, 0)
+WeaponsTitle.Size = UDim2.new(0, 109, 0, 16)
+WeaponsTitle.Font = Enum.Font.Ubuntu
+WeaponsTitle.Text = "Equip"
+WeaponsTitle.TextColor3 = Color3.fromRGB(144, 144, 144)
+WeaponsTitle.TextSize = 20.000
+
+GunsSubframe.Name = "GunsSubframe"
+GunsSubframe.Parent = WeaponsFrame
+GunsSubframe.Active = true
+GunsSubframe.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+GunsSubframe.BorderSizePixel = 0
+GunsSubframe.Position = UDim2.new(0.051282078, 0, 0.207317069, 0)
+GunsSubframe.Size = UDim2.new(0, 116, 0, 117)
+GunsSubframe.CanvasSize = UDim2.new(0, 0, 4, 0)
+GunsSubframe.ScrollBarThickness = 4
+GunsSubframe.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+Minigun.Name = "Minigun"
+Minigun.Parent = GunsSubframe
+Minigun.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Minigun.BorderSizePixel = 0
+Minigun.Position = UDim2.new(0.0862068981, 0, 0.0152439019, 0)
+Minigun.Size = UDim2.new(0, 96, 0, 21)
+Minigun.Font = Enum.Font.Ubuntu
+Minigun.Text = "Minigun"
+Minigun.TextColor3 = Color3.fromRGB(144, 144, 144)
+Minigun.TextSize = 14.000
+
+PlasmaEvo.Name = "PlasmaEvo"
+PlasmaEvo.Parent = GunsSubframe
+PlasmaEvo.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+PlasmaEvo.BorderSizePixel = 0
+PlasmaEvo.Position = UDim2.new(0.0862068981, 0, 0.0149999997, 25)
+PlasmaEvo.Size = UDim2.new(0, 96, 0, 21)
+PlasmaEvo.Font = Enum.Font.Ubuntu
+PlasmaEvo.Text = "Plasma Evo"
+PlasmaEvo.TextColor3 = Color3.fromRGB(144, 144, 144)
+PlasmaEvo.TextSize = 14.000
+
+CyberSniper.Name = "CyberSniper"
+CyberSniper.Parent = GunsSubframe
+CyberSniper.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+CyberSniper.BorderSizePixel = 0
+CyberSniper.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 50)
+CyberSniper.Size = UDim2.new(0, 96, 0, 21)
+CyberSniper.Font = Enum.Font.Ubuntu
+CyberSniper.Text = "Cyber Sniper"
+CyberSniper.TextColor3 = Color3.fromRGB(144, 144, 144)
+CyberSniper.TextSize = 14.000
+
+AK47.Name = "AK47"
+AK47.Parent = GunsSubframe
+AK47.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AK47.BorderSizePixel = 0
+AK47.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 75)
+AK47.Size = UDim2.new(0, 96, 0, 21)
+AK47.Font = Enum.Font.Ubuntu
+AK47.Text = "AK-47"
+AK47.TextColor3 = Color3.fromRGB(144, 144, 144)
+AK47.TextSize = 14.000
+
+Witness.Name = "Witness"
+Witness.Parent = GunsSubframe
+Witness.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Witness.BorderSizePixel = 0
+Witness.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 100)
+Witness.Size = UDim2.new(0, 96, 0, 21)
+Witness.Font = Enum.Font.Ubuntu
+Witness.Text = "Witness"
+Witness.TextColor3 = Color3.fromRGB(144, 144, 144)
+Witness.TextSize = 14.000
+
+Glock.Name = "Glock"
+Glock.Parent = GunsSubframe
+Glock.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Glock.BorderSizePixel = 0
+Glock.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 125)
+Glock.Size = UDim2.new(0, 96, 0, 21)
+Glock.Font = Enum.Font.Ubuntu
+Glock.Text = "Glock"
+Glock.TextColor3 = Color3.fromRGB(144, 144, 144)
+Glock.TextSize = 14.000
+
+PlasmaDeagle.Name = "PlasmaDeagle"
+PlasmaDeagle.Parent = GunsSubframe
+PlasmaDeagle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+PlasmaDeagle.BorderSizePixel = 0
+PlasmaDeagle.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 150)
+PlasmaDeagle.Size = UDim2.new(0, 96, 0, 21)
+PlasmaDeagle.Font = Enum.Font.Ubuntu
+PlasmaDeagle.Text = "Plasma Deagle"
+PlasmaDeagle.TextColor3 = Color3.fromRGB(144, 144, 144)
+PlasmaDeagle.TextSize = 14.000
+
+Revolver.Name = "Revolver"
+Revolver.Parent = GunsSubframe
+Revolver.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Revolver.BorderSizePixel = 0
+Revolver.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 175)
+Revolver.Size = UDim2.new(0, 96, 0, 21)
+Revolver.Font = Enum.Font.Ubuntu
+Revolver.Text = "Revolver"
+Revolver.TextColor3 = Color3.fromRGB(144, 144, 144)
+Revolver.TextSize = 14.000
+
+TacticalPistol.Name = "TacticalPistol"
+TacticalPistol.Parent = GunsSubframe
+TacticalPistol.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TacticalPistol.BorderSizePixel = 0
+TacticalPistol.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 200)
+TacticalPistol.Size = UDim2.new(0, 96, 0, 21)
+TacticalPistol.Font = Enum.Font.Ubuntu
+TacticalPistol.Text = "Tactical Pistol"
+TacticalPistol.TextColor3 = Color3.fromRGB(144, 144, 144)
+TacticalPistol.TextSize = 14.000
+
+Skorpion.Name = "Skorpion"
+Skorpion.Parent = GunsSubframe
+Skorpion.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Skorpion.BorderSizePixel = 0
+Skorpion.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 225)
+Skorpion.Size = UDim2.new(0, 96, 0, 21)
+Skorpion.Font = Enum.Font.Ubuntu
+Skorpion.Text = "Skorpion"
+Skorpion.TextColor3 = Color3.fromRGB(144, 144, 144)
+Skorpion.TextSize = 14.000
+
+P90.Name = "P90"
+P90.Parent = GunsSubframe
+P90.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+P90.BorderSizePixel = 0
+P90.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 250)
+P90.Size = UDim2.new(0, 96, 0, 21)
+P90.Font = Enum.Font.Ubuntu
+P90.Text = "P90"
+P90.TextColor3 = Color3.fromRGB(144, 144, 144)
+P90.TextSize = 14.000
+
+TommyGun.Name = "TommyGun"
+TommyGun.Parent = GunsSubframe
+TommyGun.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TommyGun.BorderSizePixel = 0
+TommyGun.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 275)
+TommyGun.Size = UDim2.new(0, 96, 0, 21)
+TommyGun.Font = Enum.Font.Ubuntu
+TommyGun.Text = "Tommy Gun"
+TommyGun.TextColor3 = Color3.fromRGB(144, 144, 144)
+TommyGun.TextSize = 14.000
+
+Aug.Name = "Aug"
+Aug.Parent = GunsSubframe
+Aug.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Aug.BorderSizePixel = 0
+Aug.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 300)
+Aug.Size = UDim2.new(0, 96, 0, 21)
+Aug.Font = Enum.Font.Ubuntu
+Aug.Text = "AUG"
+Aug.TextColor3 = Color3.fromRGB(144, 144, 144)
+Aug.TextSize = 14.000
+
+M16a4.Name = "M16a4"
+M16a4.Parent = GunsSubframe
+M16a4.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+M16a4.BorderSizePixel = 0
+M16a4.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 325)
+M16a4.Size = UDim2.new(0, 96, 0, 21)
+M16a4.Font = Enum.Font.Ubuntu
+M16a4.Text = "M16A4"
+M16a4.TextColor3 = Color3.fromRGB(144, 144, 144)
+M16a4.TextSize = 14.000
+
+Famas.Name = "Famas"
+Famas.Parent = GunsSubframe
+Famas.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Famas.BorderSizePixel = 0
+Famas.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 350)
+Famas.Size = UDim2.new(0, 96, 0, 21)
+Famas.Font = Enum.Font.Ubuntu
+Famas.Text = "Famas"
+Famas.TextColor3 = Color3.fromRGB(144, 144, 144)
+Famas.TextSize = 14.000
+
+DoubleBarrel.Name = "Double Barrel"
+DoubleBarrel.Parent = GunsSubframe
+DoubleBarrel.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+DoubleBarrel.BorderSizePixel = 0
+DoubleBarrel.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 375)
+DoubleBarrel.Size = UDim2.new(0, 96, 0, 21)
+DoubleBarrel.Font = Enum.Font.Ubuntu
+DoubleBarrel.Text = "Double Barrel"
+DoubleBarrel.TextColor3 = Color3.fromRGB(144, 144, 144)
+DoubleBarrel.TextSize = 14.000
+
+SlugShotgun.Name = "SlugShotgun"
+SlugShotgun.Parent = GunsSubframe
+SlugShotgun.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+SlugShotgun.BorderSizePixel = 0
+SlugShotgun.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 400)
+SlugShotgun.Size = UDim2.new(0, 96, 0, 21)
+SlugShotgun.Font = Enum.Font.Ubuntu
+SlugShotgun.Text = "Slug Shotgun"
+SlugShotgun.TextColor3 = Color3.fromRGB(144, 144, 144)
+SlugShotgun.TextSize = 14.000
+
+Flamespitter.Name = "Flamespitter"
+Flamespitter.Parent = GunsSubframe
+Flamespitter.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Flamespitter.BorderSizePixel = 0
+Flamespitter.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 425)
+Flamespitter.Size = UDim2.new(0, 96, 0, 21)
+Flamespitter.Font = Enum.Font.Ubuntu
+Flamespitter.Text = "Flamespitter"
+Flamespitter.TextColor3 = Color3.fromRGB(144, 144, 144)
+Flamespitter.TextSize = 14.000
+
+NinjaStars.Name = "NinjaStars"
+NinjaStars.Parent = GunsSubframe
+NinjaStars.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+NinjaStars.BorderSizePixel = 0
+NinjaStars.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 450)
+NinjaStars.Size = UDim2.new(0, 96, 0, 21)
+NinjaStars.Font = Enum.Font.Ubuntu
+NinjaStars.Text = "Ninja Stars"
+NinjaStars.TextColor3 = Color3.fromRGB(144, 144, 144)
+NinjaStars.TextSize = 14.000
+
+MeleeSubframe.Name = "MeleeSubframe"
+MeleeSubframe.Parent = WeaponsFrame
+MeleeSubframe.Active = true
+MeleeSubframe.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+MeleeSubframe.BorderSizePixel = 0
+MeleeSubframe.Position = UDim2.new(0.527472556, 0, 0.207317069, 0)
+MeleeSubframe.Size = UDim2.new(0, 116, 0, 117)
+MeleeSubframe.CanvasSize = UDim2.new(0, 0, 4, 0)
+MeleeSubframe.ScrollBarThickness = 4
+
+Stick.Name = "Stick"
+Stick.Parent = MeleeSubframe
+Stick.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Stick.BorderSizePixel = 0
+Stick.Position = UDim2.new(0.0862068981, 0, 0.0152439019, 0)
+Stick.Size = UDim2.new(0, 96, 0, 21)
+Stick.Font = Enum.Font.Ubuntu
+Stick.Text = "Stick"
+Stick.TextColor3 = Color3.fromRGB(144, 144, 144)
+Stick.TextSize = 14.000
+
+Bat.Name = "Bat"
+Bat.Parent = MeleeSubframe
+Bat.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Bat.BorderSizePixel = 0
+Bat.Position = UDim2.new(0.0862068981, 0, 0.0149999997, 25)
+Bat.Size = UDim2.new(0, 96, 0, 21)
+Bat.Font = Enum.Font.Ubuntu
+Bat.Text = "Bat"
+Bat.TextColor3 = Color3.fromRGB(144, 144, 144)
+Bat.TextSize = 14.000
+
+DemolitionHammer.Name = "DemolitionHammer"
+DemolitionHammer.Parent = MeleeSubframe
+DemolitionHammer.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+DemolitionHammer.BorderSizePixel = 0
+DemolitionHammer.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 50)
+DemolitionHammer.Size = UDim2.new(0, 96, 0, 21)
+DemolitionHammer.Font = Enum.Font.Ubuntu
+DemolitionHammer.Text = "Demo Hammer"
+DemolitionHammer.TextColor3 = Color3.fromRGB(144, 144, 144)
+DemolitionHammer.TextSize = 14.000
+
+BlueLightsaber.Name = "BlueLightsaber"
+BlueLightsaber.Parent = MeleeSubframe
+BlueLightsaber.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+BlueLightsaber.BorderSizePixel = 0
+BlueLightsaber.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 75)
+BlueLightsaber.Size = UDim2.new(0, 96, 0, 21)
+BlueLightsaber.Font = Enum.Font.Ubuntu
+BlueLightsaber.Text = "Blue Saber"
+BlueLightsaber.TextColor3 = Color3.fromRGB(144, 144, 144)
+BlueLightsaber.TextSize = 14.000
+
+Wrench.Name = "Wrench"
+Wrench.Parent = MeleeSubframe
+Wrench.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Wrench.BorderSizePixel = 0
+Wrench.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 100)
+Wrench.Size = UDim2.new(0, 96, 0, 21)
+Wrench.Font = Enum.Font.Ubuntu
+Wrench.Text = "Wrench"
+Wrench.TextColor3 = Color3.fromRGB(144, 144, 144)
+Wrench.TextSize = 14.000
+
+RedLightsaber.Name = "RedLightsaber"
+RedLightsaber.Parent = MeleeSubframe
+RedLightsaber.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+RedLightsaber.BorderSizePixel = 0
+RedLightsaber.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 125)
+RedLightsaber.Size = UDim2.new(0, 96, 0, 21)
+RedLightsaber.Font = Enum.Font.Ubuntu
+RedLightsaber.Text = "Red Saber"
+RedLightsaber.TextColor3 = Color3.fromRGB(144, 144, 144)
+RedLightsaber.TextSize = 14.000
+
+BigHammer.Name = "Big Hammer"
+BigHammer.Parent = MeleeSubframe
+BigHammer.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+BigHammer.BorderSizePixel = 0
+BigHammer.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 150)
+BigHammer.Size = UDim2.new(0, 96, 0, 21)
+BigHammer.Font = Enum.Font.Ubuntu
+BigHammer.Text = "Big Hammer"
+BigHammer.TextColor3 = Color3.fromRGB(144, 144, 144)
+BigHammer.TextSize = 14.000
+
+Pick.Name = "Pick"
+Pick.Parent = MeleeSubframe
+Pick.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Pick.BorderSizePixel = 0
+Pick.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 175)
+Pick.Size = UDim2.new(0, 96, 0, 21)
+Pick.Font = Enum.Font.Ubuntu
+Pick.Text = "Pick"
+Pick.TextColor3 = Color3.fromRGB(144, 144, 144)
+Pick.TextSize = 14.000
+
+Pipe.Name = "Pipe"
+Pipe.Parent = MeleeSubframe
+Pipe.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Pipe.BorderSizePixel = 0
+Pipe.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 200)
+Pipe.Size = UDim2.new(0, 96, 0, 21)
+Pipe.Font = Enum.Font.Ubuntu
+Pipe.Text = "Pipe"
+Pipe.TextColor3 = Color3.fromRGB(144, 144, 144)
+Pipe.TextSize = 14.000
+
+Machete.Name = "Machete"
+Machete.Parent = MeleeSubframe
+Machete.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Machete.BorderSizePixel = 0
+Machete.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 225)
+Machete.Size = UDim2.new(0, 96, 0, 21)
+Machete.Font = Enum.Font.Ubuntu
+Machete.Text = "Machete"
+Machete.TextColor3 = Color3.fromRGB(144, 144, 144)
+Machete.TextSize = 14.000
+
+Sickle.Name = "Sickle"
+Sickle.Parent = MeleeSubframe
+Sickle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Sickle.BorderSizePixel = 0
+Sickle.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 250)
+Sickle.Size = UDim2.new(0, 96, 0, 21)
+Sickle.Font = Enum.Font.Ubuntu
+Sickle.Text = "Sickle"
+Sickle.TextColor3 = Color3.fromRGB(144, 144, 144)
+Sickle.TextSize = 14.000
+
+Katana.Name = "Katana"
+Katana.Parent = MeleeSubframe
+Katana.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Katana.BorderSizePixel = 0
+Katana.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 275)
+Katana.Size = UDim2.new(0, 96, 0, 21)
+Katana.Font = Enum.Font.Ubuntu
+Katana.Text = "Katana"
+Katana.TextColor3 = Color3.fromRGB(144, 144, 144)
+Katana.TextSize = 14.000
+
+Chainsaw.Name = "Chainsaw"
+Chainsaw.Parent = MeleeSubframe
+Chainsaw.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Chainsaw.BorderSizePixel = 0
+Chainsaw.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 325)
+Chainsaw.Size = UDim2.new(0, 96, 0, 21)
+Chainsaw.Font = Enum.Font.Ubuntu
+Chainsaw.Text = "Chainsaw"
+Chainsaw.TextColor3 = Color3.fromRGB(144, 144, 144)
+Chainsaw.TextSize = 14.000
+
+Axe.Name = "Axe"
+Axe.Parent = MeleeSubframe
+Axe.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Axe.BorderSizePixel = 0
+Axe.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 350)
+Axe.Size = UDim2.new(0, 96, 0, 21)
+Axe.Font = Enum.Font.Ubuntu
+Axe.Text = "Axe"
+Axe.TextColor3 = Color3.fromRGB(144, 144, 144)
+Axe.TextSize = 14.000
+
+BatWithNails.Name = "BatWithNails"
+BatWithNails.Parent = MeleeSubframe
+BatWithNails.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+BatWithNails.BorderSizePixel = 0
+BatWithNails.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 300)
+BatWithNails.Size = UDim2.new(0, 96, 0, 21)
+BatWithNails.Font = Enum.Font.Ubuntu
+BatWithNails.Text = "Bat w/ Nails"
+BatWithNails.TextColor3 = Color3.fromRGB(144, 144, 144)
+BatWithNails.TextSize = 14.000
+
+Knife.Name = "Knife"
+Knife.Parent = MeleeSubframe
+Knife.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Knife.BorderSizePixel = 0
+Knife.Position = UDim2.new(0.0860000029, 0, 0.0149999997, 375)
+Knife.Size = UDim2.new(0, 96, 0, 21)
+Knife.Font = Enum.Font.Ubuntu
+Knife.Text = "Knife"
+Knife.TextColor3 = Color3.fromRGB(144, 144, 144)
+Knife.TextSize = 14.000
+
+CloseBtn.Name = "CloseBtn"
+CloseBtn.Parent = Topframe
+CloseBtn.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+CloseBtn.BackgroundTransparency = 1.000
+CloseBtn.BorderColor3 = Color3.fromRGB(24, 24, 24)
+CloseBtn.BorderSizePixel = 0
+CloseBtn.Position = UDim2.new(0.919413924, 0, 0, 0)
+CloseBtn.Size = UDim2.new(0, 22, 0, 25)
+CloseBtn.Font = Enum.Font.Ubuntu
+CloseBtn.Text = "×"
+CloseBtn.TextColor3 = Color3.fromRGB(144, 144, 144)
+CloseBtn.TextSize = 30.000
+CloseBtn.TextStrokeColor3 = Color3.fromRGB(149, 149, 149)
+
+Title.Name = "Title"
+Title.Parent = Topframe
+Title.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.131868139, 0, 0.103448279, 0)
+Title.Size = UDim2.new(0, 200, 0, 22)
+Title.Font = Enum.Font.Ubuntu
+Title.Text = "Psykek#3180"
+Title.TextColor3 = Color3.fromRGB(144, 144, 144)
+Title.TextSize = 17.000
+
+DesignFull.Name = "DesignFull"
+DesignFull.Parent = Topframe
+DesignFull.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+DesignFull.BackgroundTransparency = 1.000
+DesignFull.BorderColor3 = Color3.fromRGB(24, 24, 24)
+DesignFull.BorderSizePixel = 0
+DesignFull.Position = UDim2.new(0, 0, 0.103448279, 0)
+DesignFull.Size = UDim2.new(0, 22, 0, 22)
+DesignFull.Font = Enum.Font.Ubuntu
+DesignFull.Text = "•"
+DesignFull.TextColor3 = Color3.fromRGB(144, 144, 144)
+DesignFull.TextSize = 50.000
+DesignFull.TextStrokeColor3 = Color3.fromRGB(149, 149, 149)
+
+NavFrame.Name = "NavFrame"
+NavFrame.Parent = Topframe
+NavFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+NavFrame.BorderSizePixel = 0
+NavFrame.Position = UDim2.new(0, 0, 1, 0)
+NavFrame.Size = UDim2.new(0, 273, 0, 17)
+
+WeaponTab.Name = "WeaponTab"
+WeaponTab.Parent = NavFrame
+WeaponTab.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+WeaponTab.BorderSizePixel = 0
+WeaponTab.Size = UDim2.new(0, 55, 0, 17)
+WeaponTab.Font = Enum.Font.SourceSans
+WeaponTab.Text = "1"
+WeaponTab.TextColor3 = Color3.fromRGB(144, 144, 144)
+WeaponTab.TextSize = 14.000
+
+TurretTab.Name = "TurretTab"
+TurretTab.Parent = NavFrame
+TurretTab.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TurretTab.BorderSizePixel = 0
+TurretTab.Position = UDim2.new(0.201465204, 0, 0, 0)
+TurretTab.Size = UDim2.new(0, 55, 0, 17)
+TurretTab.Font = Enum.Font.SourceSans
+TurretTab.Text = "2"
+TurretTab.TextColor3 = Color3.fromRGB(144, 144, 144)
+TurretTab.TextSize = 14.000
+
+DefenseTab.Name = "DefenseTab"
+DefenseTab.Parent = NavFrame
+DefenseTab.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+DefenseTab.BorderSizePixel = 0
+DefenseTab.Position = UDim2.new(0.402930409, 0, 0, 0)
+DefenseTab.Size = UDim2.new(0, 55, 0, 17)
+DefenseTab.Font = Enum.Font.SourceSans
+DefenseTab.Text = "3"
+DefenseTab.TextColor3 = Color3.fromRGB(144, 144, 144)
+DefenseTab.TextSize = 14.000
+
+OtherFunctionsTab.Name = "OtherFunctionsTab"
+OtherFunctionsTab.Parent = NavFrame
+OtherFunctionsTab.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+OtherFunctionsTab.BorderSizePixel = 0
+OtherFunctionsTab.Position = UDim2.new(0.604395628, 0, 0, 0)
+OtherFunctionsTab.Size = UDim2.new(0, 55, 0, 17)
+OtherFunctionsTab.Font = Enum.Font.SourceSans
+OtherFunctionsTab.Text = "4"
+OtherFunctionsTab.TextColor3 = Color3.fromRGB(144, 144, 144)
+OtherFunctionsTab.TextSize = 14.000
+
+TeleportsTab.Name = "TeleportsTab"
+TeleportsTab.Parent = NavFrame
+TeleportsTab.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TeleportsTab.BorderSizePixel = 0
+TeleportsTab.Position = UDim2.new(0.805860817, 0, 0, 0)
+TeleportsTab.Size = UDim2.new(0, 53, 0, 17)
+TeleportsTab.Font = Enum.Font.SourceSans
+TeleportsTab.Text = "5"
+TeleportsTab.TextColor3 = Color3.fromRGB(144, 144, 144)
+TeleportsTab.TextSize = 14.000
+
+TurretFrame.Name = "TurretFrame"
+TurretFrame.Parent = Topframe
+TurretFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TurretFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TurretFrame.BorderSizePixel = 0
+TurretFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+TurretFrame.Size = UDim2.new(0, 273, 0, 164)
+TurretFrame.Visible = false
+
+TurretWaitBox.Name = "TurretWaitBox"
+TurretWaitBox.Parent = TurretFrame
+TurretWaitBox.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+TurretWaitBox.BorderSizePixel = 0
+TurretWaitBox.Position = UDim2.new(0, 14, 0, 13)
+TurretWaitBox.Size = UDim2.new(0, 244, 0, 27)
+TurretWaitBox.ClearTextOnFocus = false
+TurretWaitBox.Font = Enum.Font.Ubuntu
+TurretWaitBox.PlaceholderColor3 = Color3.fromRGB(59, 59, 59)
+TurretWaitBox.PlaceholderText = "Wait time in seconds"
+TurretWaitBox.Text = ""
+TurretWaitBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TurretWaitBox.TextSize = 14.000
+
+CrossbowTurret.Name = "CrossbowTurret"
+CrossbowTurret.Parent = TurretFrame
+CrossbowTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+CrossbowTurret.BorderSizePixel = 0
+CrossbowTurret.Position = UDim2.new(0.0842490867, -10, 0.26219511, 10)
+CrossbowTurret.Size = UDim2.new(0, 75, 0, 27)
+CrossbowTurret.Font = Enum.Font.Ubuntu
+CrossbowTurret.Text = "Crossbow"
+CrossbowTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+CrossbowTurret.TextSize = 14.000
+
+BasicTurret.Name = "BasicTurret"
+BasicTurret.Parent = TurretFrame
+BasicTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+BasicTurret.BorderSizePixel = 0
+BasicTurret.Position = UDim2.new(0.395604402, -10, 0.26219511, 10)
+BasicTurret.Size = UDim2.new(0, 75, 0, 27)
+BasicTurret.Font = Enum.Font.Ubuntu
+BasicTurret.Text = "Basic"
+BasicTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+BasicTurret.TextSize = 14.000
+
+AdvancedTurret.Name = "AdvancedTurret"
+AdvancedTurret.Parent = TurretFrame
+AdvancedTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+AdvancedTurret.BorderSizePixel = 0
+AdvancedTurret.Position = UDim2.new(0.706959724, -10, 0.26219511, 10)
+AdvancedTurret.Size = UDim2.new(0, 75, 0, 27)
+AdvancedTurret.Font = Enum.Font.Ubuntu
+AdvancedTurret.Text = "Advanced"
+AdvancedTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdvancedTurret.TextSize = 14.000
+
+Rocket2.Name = "Rocket2"
+Rocket2.Parent = TurretFrame
+Rocket2.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Rocket2.BorderSizePixel = 0
+Rocket2.Position = UDim2.new(0.706959724, -10, 0.48780486, 10)
+Rocket2.Size = UDim2.new(0, 75, 0, 27)
+Rocket2.Font = Enum.Font.Ubuntu
+Rocket2.Text = "Rocket 2"
+Rocket2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rocket2.TextSize = 14.000
+
+MinigunTurret.Name = "MinigunTurret"
+MinigunTurret.Parent = TurretFrame
+MinigunTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+MinigunTurret.BorderSizePixel = 0
+MinigunTurret.Position = UDim2.new(0.395604402, -10, 0.48780486, 10)
+MinigunTurret.Size = UDim2.new(0, 75, 0, 27)
+MinigunTurret.Font = Enum.Font.Ubuntu
+MinigunTurret.Text = "Minigun"
+MinigunTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+MinigunTurret.TextSize = 14.000
+
+Rocket1.Name = "Rocket1"
+Rocket1.Parent = TurretFrame
+Rocket1.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Rocket1.BorderSizePixel = 0
+Rocket1.Position = UDim2.new(0.0842490867, -10, 0.48780486, 10)
+Rocket1.Size = UDim2.new(0, 75, 0, 27)
+Rocket1.Font = Enum.Font.Ubuntu
+Rocket1.Text = "Rocket 1"
+Rocket1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rocket1.TextSize = 14.000
+
+GhostTurret.Name = "GhostTurret"
+GhostTurret.Parent = TurretFrame
+GhostTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+GhostTurret.BorderSizePixel = 0
+GhostTurret.Position = UDim2.new(0.706959724, -10, 0.701219499, 10)
+GhostTurret.Size = UDim2.new(0, 75, 0, 27)
+GhostTurret.Font = Enum.Font.Ubuntu
+GhostTurret.Text = "Ghost"
+GhostTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+GhostTurret.TextSize = 14.000
+
+CyberTurret.Name = "CyberTurret"
+CyberTurret.Parent = TurretFrame
+CyberTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+CyberTurret.BorderSizePixel = 0
+CyberTurret.Position = UDim2.new(0.395604402, -10, 0.701219499, 10)
+CyberTurret.Size = UDim2.new(0, 75, 0, 27)
+CyberTurret.Font = Enum.Font.Ubuntu
+CyberTurret.Text = "Cyber"
+CyberTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+CyberTurret.TextSize = 14.000
+
+HalloweenTurret.Name = "HalloweenTurret"
+HalloweenTurret.Parent = TurretFrame
+HalloweenTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+HalloweenTurret.BorderSizePixel = 0
+HalloweenTurret.Position = UDim2.new(0.0842490867, -10, 0.701219499, 10)
+HalloweenTurret.Size = UDim2.new(0, 75, 0, 27)
+HalloweenTurret.Font = Enum.Font.Ubuntu
+HalloweenTurret.Text = "Halloween"
+HalloweenTurret.TextColor3 = Color3.fromRGB(0, 0, 0)
+HalloweenTurret.TextSize = 14.000
+
+DefenseFrame.Name = "DefenseFrame"
+DefenseFrame.Parent = Topframe
+DefenseFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+DefenseFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DefenseFrame.BorderSizePixel = 0
+DefenseFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+DefenseFrame.Size = UDim2.new(0, 273, 0, 164)
+DefenseFrame.Visible = false
+
+DefenseWaitBox.Name = "DefenseWaitBox"
+DefenseWaitBox.Parent = DefenseFrame
+DefenseWaitBox.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+DefenseWaitBox.BorderSizePixel = 0
+DefenseWaitBox.Position = UDim2.new(0, 14, 0, 13)
+DefenseWaitBox.Size = UDim2.new(0, 244, 0, 27)
+DefenseWaitBox.ClearTextOnFocus = false
+DefenseWaitBox.Font = Enum.Font.Ubuntu
+DefenseWaitBox.PlaceholderColor3 = Color3.fromRGB(59, 59, 59)
+DefenseWaitBox.PlaceholderText = "Wait time in seconds"
+DefenseWaitBox.Text = ""
+DefenseWaitBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+DefenseWaitBox.TextSize = 14.000
+
+TireBarricade.Name = "TireBarricade"
+TireBarricade.Parent = DefenseFrame
+TireBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+TireBarricade.BorderSizePixel = 0
+TireBarricade.Position = UDim2.new(0.0842490867, -10, 0.26219511, 10)
+TireBarricade.Size = UDim2.new(0, 75, 0, 27)
+TireBarricade.Font = Enum.Font.Ubuntu
+TireBarricade.Text = "Tires"
+TireBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+TireBarricade.TextSize = 14.000
+
+WoodBarricade.Name = "WoodBarricade"
+WoodBarricade.Parent = DefenseFrame
+WoodBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+WoodBarricade.BorderSizePixel = 0
+WoodBarricade.Position = UDim2.new(0.395604402, -10, 0.26219511, 10)
+WoodBarricade.Size = UDim2.new(0, 75, 0, 27)
+WoodBarricade.Font = Enum.Font.Ubuntu
+WoodBarricade.Text = "Wood Wall"
+WoodBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+WoodBarricade.TextSize = 14.000
+
+SandbagBarricade.Name = "SandbagBarricade"
+SandbagBarricade.Parent = DefenseFrame
+SandbagBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+SandbagBarricade.BorderSizePixel = 0
+SandbagBarricade.Position = UDim2.new(0.706959724, -10, 0.26219511, 10)
+SandbagBarricade.Size = UDim2.new(0, 75, 0, 27)
+SandbagBarricade.Font = Enum.Font.Ubuntu
+SandbagBarricade.Text = "Sandbags"
+SandbagBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+SandbagBarricade.TextSize = 14.000
+
+TowerBarricade.Name = "TowerBarricade"
+TowerBarricade.Parent = DefenseFrame
+TowerBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+TowerBarricade.BorderSizePixel = 0
+TowerBarricade.Position = UDim2.new(0.706959724, -10, 0.48780486, 10)
+TowerBarricade.Size = UDim2.new(0, 75, 0, 27)
+TowerBarricade.Font = Enum.Font.Ubuntu
+TowerBarricade.Text = "Tower"
+TowerBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+TowerBarricade.TextSize = 14.000
+
+MetalBarricade.Name = "MetalBarricade"
+MetalBarricade.Parent = DefenseFrame
+MetalBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+MetalBarricade.BorderSizePixel = 0
+MetalBarricade.Position = UDim2.new(0.395604402, -10, 0.48780486, 10)
+MetalBarricade.Size = UDim2.new(0, 75, 0, 27)
+MetalBarricade.Font = Enum.Font.Ubuntu
+MetalBarricade.Text = "Metal Wall"
+MetalBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+MetalBarricade.TextSize = 14.000
+
+SpikeBarricade.Name = "SpikeBarricade"
+SpikeBarricade.Parent = DefenseFrame
+SpikeBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+SpikeBarricade.BorderSizePixel = 0
+SpikeBarricade.Position = UDim2.new(0.0842490867, -10, 0.48780486, 10)
+SpikeBarricade.Size = UDim2.new(0, 75, 0, 27)
+SpikeBarricade.Font = Enum.Font.Ubuntu
+SpikeBarricade.Text = "Spikes"
+SpikeBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpikeBarricade.TextSize = 14.000
+
+CyberBarricade.Name = "CyberBarricade"
+CyberBarricade.Parent = DefenseFrame
+CyberBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+CyberBarricade.BorderSizePixel = 0
+CyberBarricade.Position = UDim2.new(0.395604402, -10, 0.701219499, 10)
+CyberBarricade.Size = UDim2.new(0, 75, 0, 27)
+CyberBarricade.Font = Enum.Font.Ubuntu
+CyberBarricade.Text = "Cyber"
+CyberBarricade.TextColor3 = Color3.fromRGB(0, 0, 0)
+CyberBarricade.TextSize = 14.000
+
+OtherFunctionsFrame.Name = "OtherFunctionsFrame"
+OtherFunctionsFrame.Parent = Topframe
+OtherFunctionsFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+OtherFunctionsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OtherFunctionsFrame.BorderSizePixel = 0
+OtherFunctionsFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+OtherFunctionsFrame.Size = UDim2.new(0, 273, 0, 164)
+OtherFunctionsFrame.Visible = false
+
+ATV.Name = "ATV"
+ATV.Parent = OtherFunctionsFrame
+ATV.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+ATV.BorderSizePixel = 0
+ATV.Position = UDim2.new(0.0879120901, -10, 0.0121951215, 10)
+ATV.Size = UDim2.new(0, 75, 0, 37)
+ATV.Font = Enum.Font.Ubuntu
+ATV.Text = "ATV"
+ATV.TextColor3 = Color3.fromRGB(0, 0, 0)
+ATV.TextSize = 14.000
+
+Pickup.Name = "Pickup"
+Pickup.Parent = OtherFunctionsFrame
+Pickup.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Pickup.BorderSizePixel = 0
+Pickup.Position = UDim2.new(0.0879120901, -10, 0.322687656, 10)
+Pickup.Size = UDim2.new(0, 75, 0, 37)
+Pickup.Font = Enum.Font.Ubuntu
+Pickup.Text = "Pickup"
+Pickup.TextColor3 = Color3.fromRGB(0, 0, 0)
+Pickup.TextSize = 14.000
+
+Humvee.Name = "Humvee"
+Humvee.Parent = OtherFunctionsFrame
+Humvee.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Humvee.BorderSizePixel = 0
+Humvee.Position = UDim2.new(0.0879120901, -10, 0.63318038, 10)
+Humvee.Size = UDim2.new(0, 75, 0, 37)
+Humvee.Font = Enum.Font.Ubuntu
+Humvee.Text = "Humvee"
+Humvee.TextColor3 = Color3.fromRGB(0, 0, 0)
+Humvee.TextSize = 14.000
+
+AquaModzGUI.Name = "AquaModzGUI"
+AquaModzGUI.Parent = OtherFunctionsFrame
+AquaModzGUI.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+AquaModzGUI.BorderSizePixel = 0
+AquaModzGUI.Position = UDim2.new(0.402930409, -10, 0.63318038, 10)
+AquaModzGUI.Size = UDim2.new(0, 75, 0, 37)
+AquaModzGUI.Font = Enum.Font.Ubuntu
+AquaModzGUI.Text = "Aqua's GUI"
+AquaModzGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+AquaModzGUI.TextSize = 14.000
+
+UnlockAllMelee.Name = "UnlockAllMelee"
+UnlockAllMelee.Parent = OtherFunctionsFrame
+UnlockAllMelee.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+UnlockAllMelee.BorderSizePixel = 0
+UnlockAllMelee.Position = UDim2.new(0.402930409, -10, 0.322687656, 10)
+UnlockAllMelee.Size = UDim2.new(0, 161, 0, 37)
+UnlockAllMelee.Font = Enum.Font.Ubuntu
+UnlockAllMelee.Text = "Unlock all melee weapons"
+UnlockAllMelee.TextColor3 = Color3.fromRGB(0, 0, 0)
+UnlockAllMelee.TextSize = 14.000
+
+GooFarm.Name = "GooFarm"
+GooFarm.Parent = OtherFunctionsFrame
+GooFarm.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+GooFarm.BorderSizePixel = 0
+GooFarm.Position = UDim2.new(0.402930409, -10, 0.0121951215, 10)
+GooFarm.Size = UDim2.new(0, 75, 0, 37)
+GooFarm.Font = Enum.Font.Ubuntu
+GooFarm.Text = "Goo Farm"
+GooFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+GooFarm.TextSize = 14.000
+
+LagServer.Name = "LagServer"
+LagServer.Parent = OtherFunctionsFrame
+LagServer.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+LagServer.BorderSizePixel = 0
+LagServer.Position = UDim2.new(0.717948735, -10, 0.63318038, 10)
+LagServer.Size = UDim2.new(0, 75, 0, 37)
+LagServer.Font = Enum.Font.Ubuntu
+LagServer.Text = "Lag Server"
+LagServer.TextColor3 = Color3.fromRGB(0, 0, 0)
+LagServer.TextSize = 14.000
+
+Glow.Name = "Glow"
+Glow.Parent = OtherFunctionsFrame
+Glow.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Glow.BorderSizePixel = 0
+Glow.Position = UDim2.new(0.717948735, -10, 0.0121951215, 10)
+Glow.Size = UDim2.new(0, 75, 0, 37)
+Glow.Font = Enum.Font.Ubuntu
+Glow.Text = "Glow"
+Glow.TextColor3 = Color3.fromRGB(0, 0, 0)
+Glow.TextSize = 14.000
+
+TeleportsFrame.Name = "TeleportsFrame"
+TeleportsFrame.Parent = Topframe
+TeleportsFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TeleportsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleportsFrame.BorderSizePixel = 0
+TeleportsFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+TeleportsFrame.Size = UDim2.new(0, 273, 0, 164)
+TeleportsFrame.Visible = false
+
+Base1TP.Name = "Base1TP"
+Base1TP.Parent = TeleportsFrame
+Base1TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base1TP.BorderSizePixel = 0
+Base1TP.Position = UDim2.new(0.0842490867, -10, 0.0182926655, 10)
+Base1TP.Size = UDim2.new(0, 75, 0, 27)
+Base1TP.Font = Enum.Font.Ubuntu
+Base1TP.Text = " Base 1"
+Base1TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base1TP.TextSize = 14.000
+
+Base2TP.Name = "Base2TP"
+Base2TP.Parent = TeleportsFrame
+Base2TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base2TP.BorderSizePixel = 0
+Base2TP.Position = UDim2.new(0.395604402, -10, 0.0182926655, 10)
+Base2TP.Size = UDim2.new(0, 75, 0, 27)
+Base2TP.Font = Enum.Font.Ubuntu
+Base2TP.Text = " Base 2"
+Base2TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base2TP.TextSize = 14.000
+
+Base3TP.Name = "Base3TP"
+Base3TP.Parent = TeleportsFrame
+Base3TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base3TP.BorderSizePixel = 0
+Base3TP.Position = UDim2.new(0.706959724, -10, 0.0182926655, 10)
+Base3TP.Size = UDim2.new(0, 75, 0, 27)
+Base3TP.Font = Enum.Font.Ubuntu
+Base3TP.Text = " Base 3"
+Base3TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base3TP.TextSize = 14.000
+
+Base6TP.Name = "Base6TP"
+Base6TP.Parent = TeleportsFrame
+Base6TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base6TP.BorderSizePixel = 0
+Base6TP.Position = UDim2.new(0.706959724, -10, 0.243902415, 10)
+Base6TP.Size = UDim2.new(0, 75, 0, 27)
+Base6TP.Font = Enum.Font.Ubuntu
+Base6TP.Text = " Base 6"
+Base6TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base6TP.TextSize = 14.000
+
+Base5TP.Name = "Base5TP"
+Base5TP.Parent = TeleportsFrame
+Base5TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base5TP.BorderSizePixel = 0
+Base5TP.Position = UDim2.new(0.395604402, -10, 0.243902415, 10)
+Base5TP.Size = UDim2.new(0, 75, 0, 27)
+Base5TP.Font = Enum.Font.Ubuntu
+Base5TP.Text = " Base 5"
+Base5TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base5TP.TextSize = 14.000
+
+Base4TP.Name = "Base4TP"
+Base4TP.Parent = TeleportsFrame
+Base4TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base4TP.BorderSizePixel = 0
+Base4TP.Position = UDim2.new(0.0842490867, -10, 0.243902415, 10)
+Base4TP.Size = UDim2.new(0, 75, 0, 27)
+Base4TP.Font = Enum.Font.Ubuntu
+Base4TP.Text = " Base4"
+Base4TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base4TP.TextSize = 14.000
+
+Cave4TP.Name = "Cave4TP"
+Cave4TP.Parent = TeleportsFrame
+Cave4TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Cave4TP.BorderSizePixel = 0
+Cave4TP.Position = UDim2.new(0.706959724, -10, 0.701219499, 10)
+Cave4TP.Size = UDim2.new(0, 75, 0, 27)
+Cave4TP.Font = Enum.Font.Ubuntu
+Cave4TP.Text = " Cave 4"
+Cave4TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cave4TP.TextSize = 14.000
+
+Cave3TP.Name = "Cave3TP"
+Cave3TP.Parent = TeleportsFrame
+Cave3TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Cave3TP.BorderSizePixel = 0
+Cave3TP.Position = UDim2.new(0.395604402, -10, 0.701219499, 10)
+Cave3TP.Size = UDim2.new(0, 75, 0, 27)
+Cave3TP.Font = Enum.Font.Ubuntu
+Cave3TP.Text = " Cave 3"
+Cave3TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cave3TP.TextSize = 14.000
+
+Cave2TP.Name = "Cave2TP"
+Cave2TP.Parent = TeleportsFrame
+Cave2TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Cave2TP.BorderSizePixel = 0
+Cave2TP.Position = UDim2.new(0.0842490867, -10, 0.701219499, 10)
+Cave2TP.Size = UDim2.new(0, 75, 0, 27)
+Cave2TP.Font = Enum.Font.Ubuntu
+Cave2TP.Text = " Cave 2"
+Cave2TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cave2TP.TextSize = 14.000
+
+Base7TP.Name = "Base7TP"
+Base7TP.Parent = TeleportsFrame
+Base7TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Base7TP.BorderSizePixel = 0
+Base7TP.Position = UDim2.new(0.0842490867, -10, 0.47560975, 10)
+Base7TP.Size = UDim2.new(0, 75, 0, 27)
+Base7TP.Font = Enum.Font.Ubuntu
+Base7TP.Text = " Base 7"
+Base7TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Base7TP.TextSize = 14.000
+
+CenterTP.Name = "CenterTP"
+CenterTP.Parent = TeleportsFrame
+CenterTP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+CenterTP.BorderSizePixel = 0
+CenterTP.Position = UDim2.new(0.395604402, -10, 0.47560975, 10)
+CenterTP.Size = UDim2.new(0, 75, 0, 27)
+CenterTP.Font = Enum.Font.Ubuntu
+CenterTP.Text = " Center"
+CenterTP.TextColor3 = Color3.fromRGB(0, 0, 0)
+CenterTP.TextSize = 14.000
+
+Cave1TP.Name = "Cave1TP"
+Cave1TP.Parent = TeleportsFrame
+Cave1TP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Cave1TP.BorderSizePixel = 0
+Cave1TP.Position = UDim2.new(0.706959724, -10, 0.47560975, 10)
+Cave1TP.Size = UDim2.new(0, 75, 0, 27)
+Cave1TP.Font = Enum.Font.Ubuntu
+Cave1TP.Text = " Cave 1"
+Cave1TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cave1TP.TextSize = 14.000
+
+InfoFrame.Name = "InfoFrame"
+InfoFrame.Parent = Topframe
+InfoFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+InfoFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfoFrame.BorderSizePixel = 0
+InfoFrame.Position = UDim2.new(0, 0, 1.58620691, 0)
+InfoFrame.Size = UDim2.new(0, 273, 0, 164)
+
+JoinGame.Name = "JoinGame"
+JoinGame.Parent = InfoFrame
+JoinGame.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+JoinGame.BorderSizePixel = 0
+JoinGame.Position = UDim2.new(0.0805860832, -10, 0.0182926822, 10)
+JoinGame.Size = UDim2.new(0, 247, 0, 27)
+JoinGame.Font = Enum.Font.Ubuntu
+JoinGame.Text = "Join the game"
+JoinGame.TextColor3 = Color3.fromRGB(0, 0, 0)
+JoinGame.TextSize = 14.000
+
+TextLabel.Parent = InfoFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0476190485, 0, 0.317073166, 0)
+TextLabel.Size = UDim2.new(0, 246, 0, 42)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "If you are already in a game, press any of the tab buttons to continue"
+TextLabel.TextColor3 = Color3.fromRGB(144, 144, 144)
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(144, 144, 144)
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = InfoFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0476190485, 0, 0.573170722, 0)
+TextLabel_2.Size = UDim2.new(0, 246, 0, 57)
+TextLabel_2.Font = Enum.Font.Ubuntu
+TextLabel_2.Text = "Turret spawns nor guns equipped from this GUI will shoot. AquaModz's GUI allows you to equip and shoot all VIP guns though."
+TextLabel_2.TextColor3 = Color3.fromRGB(144, 144, 144)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeColor3 = Color3.fromRGB(144, 144, 144)
+TextLabel_2.TextWrapped = true
+
+-- Close --
+
+CloseBtn.MouseButton1Click:Connect(function()
+	ZDTGUI:Destroy()
+end)
+
+-- Tabs --
+
+WeaponTab.MouseButton1Click:Connect(function()
+	WeaponsFrame.Visible = true
+	TeleportsFrame.Visible = false
+	TurretFrame.Visible = false
+	DefenseFrame.Visible = false
+	OtherFunctionsFrame.Visible = false
+	InfoFrame.Visible = false
+	Title.Text = "Weapons"
+end)
+TurretTab.MouseButton1Click:Connect(function()
+	WeaponsFrame.Visible = false
+	TeleportsFrame.Visible = false
+	TurretFrame.Visible = true
+	DefenseFrame.Visible = false
+	OtherFunctionsFrame.Visible = false
+	InfoFrame.Visible = false
+	Title.Text = "Turret Placement"
+end)
+DefenseTab.MouseButton1Click:Connect(function()
+	WeaponsFrame.Visible = false
+	TeleportsFrame.Visible = false
+	TurretFrame.Visible = false
+	DefenseFrame.Visible = true
+	OtherFunctionsFrame.Visible = false
+	InfoFrame.Visible = false
+	Title.Text = "Defense Placement"
+end)
+OtherFunctionsTab.MouseButton1Click:Connect(function()
+	WeaponsFrame.Visible = false
+	TeleportsFrame.Visible = false
+	TurretFrame.Visible = false
+	DefenseFrame.Visible = false
+	OtherFunctionsFrame.Visible = true
+	InfoFrame.Visible = false
+	Title.Text = "Other Functions"
+end)
+TeleportsTab.MouseButton1Click:Connect(function()
+	WeaponsFrame.Visible = false
+	TeleportsFrame.Visible = true
+	TurretFrame.Visible = false
+	DefenseFrame.Visible = false
+	OtherFunctionsFrame.Visible = false
+	InfoFrame.Visible = false
+	Title.Text = "Teleports"
+end)
+
+-- Teleports --
+
+Base1TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(264.727936, 6.24095249, 219.259155))
+end)
+Base2TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(365.976929, 6.24094963, -96.0981979))
+end)
+Base3TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(264.269592, 6.2409482, -410.676544))
+end)
+Base4TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-50.8902168, 6.24094963, -513.468018))
+end)
+Base5TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-366.79129, 6.24094963, -410.460022))
+end)
+Base6TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-469.712738, 6.25922775, -94.9634857))
+end)
+Base7TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-366.219971, 6.29095125, 220.500839))
+end)
+CenterTP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-51.3362694, 9.7049942, -61.0237656))
+end)
+Cave1TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(818.254395, 6.20763254, -103.985161))
+end)
+Cave2TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-41.1991806, 5.81143951, -842.698792))
+end)
+Cave3TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-899.742493, 5.26024485, -113.535622))
+end)
+Cave4TP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-66.4152145, 6.58270502, 642.992737))
+end)
+
+-- Weapons --
+
+Minigun.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Minigun";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+PlasmaEvo.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Plasma Evo";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+CyberSniper.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Cyber Sniper";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+AK47.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "AK-47";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Witness.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Witness";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Glock.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Glock";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+PlasmaDeagle.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Plasma Deagle";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Revolver.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Revolver";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+TacticalPistol.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "TacticalPistol";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Skorpion.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Skorpion";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+P90.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "P90";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+TommyGun.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Tommy Gun";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Aug.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "AUG";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+M16a4.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "M16A4";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Famas.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Famas";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+DoubleBarrel.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Double Barrel";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+SlugShotgun.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Slug Shotgun";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Flamespitter.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "FlameSpitter";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+NinjaStars.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Ninja Star";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Stick.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Stick";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Wrench.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Wrench";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+BigHammer.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Sledge Hammer";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Sickle.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Sickle";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+RedLightsaber.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Red Light Sword";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Pipe.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Pipe";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Pick.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Pick";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Machete.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Machete";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Katana.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Katana";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+DemolitionHammer.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Demolition Hammer";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+BlueLightsaber.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Blue Light Sword";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Bat.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Bat";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Chainsaw.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Chainsaw";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Knife.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Knife";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Axe.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Axe";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+BatWithNails.MouseButton1Click:Connect(function()
+	local string_1 = "EquippedWeapon";
+	local string_2 = "Bat with Nails";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+
+-- Turrets --
+
+AdvancedTurret.MouseButton1Click:Connect(function()
+	if AdvancedTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		AdvancedTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		AdvancedTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		AdvancedTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while AdvancedTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Advanced Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+CrossbowTurret.MouseButton1Click:Connect(function()
+	if CrossbowTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		CrossbowTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		CrossbowTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		CrossbowTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while CrossbowTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Crossbow Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+BasicTurret.MouseButton1Click:Connect(function()
+	if BasicTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		BasicTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		BasicTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		BasicTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while BasicTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Basic Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+CyberTurret.MouseButton1Click:Connect(function()
+	if CyberTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		CyberTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		CyberTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		CyberTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while CyberTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Cyber Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+MinigunTurret.MouseButton1Click:Connect(function()
+	if MinigunTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		MinigunTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		MinigunTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		MinigunTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while MinigunTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Minigun Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+Rocket1.MouseButton1Click:Connect(function()
+	if Rocket1.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		Rocket1.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		Rocket1.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		Rocket1.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while Rocket1.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Basic Rocket Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+Rocket2.MouseButton1Click:Connect(function()
+	if Rocket2.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		Rocket2.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		Rocket2.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		Rocket2.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while Rocket2.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Military Rocket Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+HalloweenTurret.MouseButton1Click:Connect(function()
+	if HalloweenTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		HalloweenTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		HalloweenTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		HalloweenTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while HalloweenTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Halloween Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+GhostTurret.MouseButton1Click:Connect(function()
+	if GhostTurret.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		GhostTurret.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		GhostTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		GhostTurret.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while GhostTurret.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Turrets";
+		local string_3 = "Ghost Turret";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(TurretWaitBox.Text)
+		local number_1 = 90;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+
+-- Defense --
+
+TowerBarricade.MouseButton1Click:Connect(function()
+		if TowerBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		TowerBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			TowerBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		TowerBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while TowerBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Defense Tower";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+SandbagBarricade.MouseButton1Click:Connect(function()
+		if SandbagBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		SandbagBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			SandbagBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		SandbagBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while SandbagBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Sandbags";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+WoodBarricade.MouseButton1Click:Connect(function()
+		if WoodBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		WoodBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			WoodBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		WoodBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while WoodBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Wood Wall Barricade";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+TireBarricade.MouseButton1Click:Connect(function()
+		if TireBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		TireBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			TireBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		TireBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while TireBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Tire Barricade";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+CyberBarricade.MouseButton1Click:Connect(function()
+		if CyberBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		CyberBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			CyberBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		CyberBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while CyberBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Metal Cyber Barricade";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+MetalBarricade.MouseButton1Click:Connect(function()
+		if MetalBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		MetalBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			MetalBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		MetalBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while MetalBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Reinforced Metal Barricade";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+SpikeBarricade.MouseButton1Click:Connect(function()
+		if SpikeBarricade.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		SpikeBarricade.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+			SpikeBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		SpikeBarricade.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while SpikeBarricade.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "PlaceObject";
+		local string_2 = "Barriers";
+		local string_3 = "Spike Barricade";
+		local userdata_1 = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+		wait(DefenseWaitBox.Text)
+		local number_1 = 540;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2, string_3, userdata_1, number_1);
+	end
+end)
+						
+-- Other --
+
+GooFarm.MouseButton1Click:Connect(function()
+	if GooFarm.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		GooFarm.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		GooFarm.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		GooFarm.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while GooFarm.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "CollectDeposit";
+		local userdata_1 = game:GetService("Workspace").GooDeposits.Goo;
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, userdata_1);
+		wait(.001)
+	end
+end)
+LagServer.MouseButton1Click:Connect(function()
+	if LagServer.BackgroundColor3 == Color3.fromRGB(91, 91, 91)
+	then
+		LagServer.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+	elseif
+		LagServer.BackgroundColor3 == Color3.fromRGB(172, 172, 172)
+	then
+		LagServer.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+	end
+	while LagServer.BackgroundColor3 == Color3.fromRGB(172, 172, 172) do
+		local string_1 = "EquippedWeapon";
+		local string_2 = "Minigun";
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2);
+		local string_1 = "EquippedWeapon";
+		local string_2 = "Cyber Sniper";
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2);
+		local string_1 = "EquippedWeapon";
+		local string_2 = "AUG";
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2);
+		local string_1 = "EquippedWeapon";
+		local string_2 = "Witness";
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2);
+		wait()							
+	end
+end)
+Glow.MouseButton1Click:Connect(function()
+	for i=1, 500 do
+		local string_1 = "EquippedWeapon";
+		local string_2 = "Plasma Evo";
+		local Target = game:GetService("ReplicatedStorage").CIient;
+		Target:FireServer(string_1, string_2);
+    end	
+end)
+Pickup.MouseButton1Click:Connect(function()
+	local string_1 = "SpawnVehicle";
+	local string_2 = "Pickup";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+Humvee.MouseButton1Click:Connect(function()
+	local string_1 = "SpawnVehicle";
+	local string_2 = "Humvee";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+ATV.MouseButton1Click:Connect(function()
+	local string_1 = "SpawnVehicle";
+	local string_2 = "ATV";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+AquaModzGUI.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/ZombieDefenseGUI/main/ZombieDefenseTycoonAqua.lua", true))()
+end)
+UnlockAllMelee.MouseButton1Click:Connect(function()
+	local string_1 = "Skin";
+	local string_2 = "Shovel";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Wrench";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Sledge Hammer";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Sickle";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Red Light Sword";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Blue Light Sword";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Shovel";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Pipe";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Pick";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Machete";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Shovel";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Katana";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Demolition Hammer";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Bat";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Bat with Nails";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Knife";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Axe";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+	local string_1 = "Skin";
+	local string_2 = "Chainsaw";
+	local Target = game:GetService("ReplicatedStorage").CIient;
+	Target:FireServer(string_1, string_2);
+end)
+JoinGame.MouseButton1Click:Connect(function()
+	local placeId = "4999590694"
+	game:GetService("TeleportService"):Teleport(placeId)
+end)
