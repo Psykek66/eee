@@ -642,12 +642,12 @@ end)
 -- Game Settings
 
 Gamepassx2.MouseButton1Click:Connect(function()
-	game:GetService("Players")[game.Players.LocalPlayer.Name].gamepasses.x2Impostor.enabled.Value = true
-	game:GetService("Players")[game.Players.LocalPlayer.Name].gamepasses.x2Impostor.Value = true
+	game:GetService("Players").LocalPlayer.gamepasses.x2Impostor.Value = true
+	game:GetService("Players").psykek.gamepasses.x2Impostor.enabled.Value = true
 end)
 Gamepassx3.MouseButton1Click:Connect(function()
-	game:GetService("Players")[game.Players.LocalPlayer.Name].gamepasses.x3Impostor.enabled.Value = true
-	game:GetService("Players")[game.Players.LocalPlayer.Name].Value = true
+	game:GetService("Players").LocalPlayer.gamepasses.x3Impostor.Value = true
+	game:GetService("Players").psykek.gamepasses.x3Impostor.enabled.Value = true
 end)
 InfiniteKillRange.MouseButton1Click:Connect(function()
 	game:GetService("ReplicatedStorage").Settings.killDistance.Value = 99999999
