@@ -563,6 +563,7 @@ TeleportsTab.MouseButton1Click:Connect(function()
 	Teleports2Frame.Visible = false
 	GameSettingsFrame.Visible = false
 end)
+game:GetService("ReplicatedStorage").RemoteEvents.Client.checkyy:destroy()
 TP2Tab.MouseButton1Click:Connect(function()
 	TeleportsFrame.Visible = false
 	Teleports2Frame.Visible = true
