@@ -1,0 +1,674 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local SRTGUI = Instance.new("ScreenGui")
+local Topframe = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Close = Instance.new("ImageButton")
+local Bottomframe = Instance.new("Frame")
+local GameFunctionsFrame = Instance.new("Frame")
+local MaxCash = Instance.new("TextButton")
+local MaxIron = Instance.new("TextButton")
+local MaxTrophies = Instance.new("TextButton")
+local MaxSaplings = Instance.new("TextButton")
+local MaxBase = Instance.new("TextButton")
+local MaxEggs = Instance.new("TextButton")
+local MaxStone = Instance.new("TextButton")
+local MaxCrops = Instance.new("TextButton")
+local MaxWood = Instance.new("TextButton")
+local MaxSeeds = Instance.new("TextButton")
+local Navframe = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local GameTab = Instance.new("TextButton")
+local TeleportsFrame = Instance.new("Frame")
+local Island3TP = Instance.new("TextButton")
+local BlacksmithTP = Instance.new("TextButton")
+local Island2TP = Instance.new("TextButton")
+local BakeryTP = Instance.new("TextButton")
+local LumbermillTP = Instance.new("TextButton")
+local Island4TP = Instance.new("TextButton")
+local Island1TP = Instance.new("TextButton")
+
+--Properties:
+
+SRTGUI.Name = "SRTGUI"
+SRTGUI.Parent = game.CoreGui
+
+Topframe.Name = "Topframe"
+Topframe.Parent = SRTGUI
+Topframe.Active = true
+Topframe.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Topframe.BorderSizePixel = 0
+Topframe.Position = UDim2.new(0.251643211, 0, 0.216014892, 0)
+Topframe.Size = UDim2.new(0, 384, 0, 28)
+
+TextLabel.Parent = Topframe
+TextLabel.Active = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 301, 0, 27)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "Sky Ranch Tycoon  |  Psykek#3180"
+TextLabel.TextColor3 = Color3.fromRGB(185, 185, 185)
+TextLabel.TextSize = 20.000
+
+Close.Name = "Close"
+Close.Parent = Topframe
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.92968744, 0, 0, 0)
+Close.Size = UDim2.new(0, 28, 0, 28)
+Close.Image = "rbxassetid://3944676352"
+Close.ImageColor3 = Color3.fromRGB(186, 186, 186)
+Close.ScaleType = Enum.ScaleType.Fit
+
+Bottomframe.Name = "Bottomframe"
+Bottomframe.Parent = Topframe
+Bottomframe.Active = true
+Bottomframe.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Bottomframe.BorderSizePixel = 0
+Bottomframe.Position = UDim2.new(0, 0, 0.992788315, 0)
+Bottomframe.Size = UDim2.new(0, 384, 0, 175)
+
+GameFunctionsFrame.Name = "GameFunctionsFrame"
+GameFunctionsFrame.Parent = Bottomframe
+GameFunctionsFrame.Active = true
+GameFunctionsFrame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+GameFunctionsFrame.BorderSizePixel = 0
+GameFunctionsFrame.Position = UDim2.new(0.309895754, 0, 0.0571428575, 0)
+GameFunctionsFrame.Size = UDim2.new(0, 255, 0, 155)
+
+MaxCash.Name = "MaxCash"
+MaxCash.Parent = GameFunctionsFrame
+MaxCash.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxCash.BorderSizePixel = 0
+MaxCash.Position = UDim2.new(0, 174, 0, 12)
+MaxCash.Size = UDim2.new(0, 68, 0, 25)
+MaxCash.Font = Enum.Font.Ubuntu
+MaxCash.Text = "Cash"
+MaxCash.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxCash.TextSize = 14.000
+
+MaxIron.Name = "MaxIron"
+MaxIron.Parent = GameFunctionsFrame
+MaxIron.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxIron.BorderSizePixel = 0
+MaxIron.Position = UDim2.new(0, 174, 0, 47)
+MaxIron.Size = UDim2.new(0, 68, 0, 25)
+MaxIron.Font = Enum.Font.Ubuntu
+MaxIron.Text = "Iron"
+MaxIron.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxIron.TextSize = 14.000
+
+MaxTrophies.Name = "MaxTrophies"
+MaxTrophies.Parent = GameFunctionsFrame
+MaxTrophies.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxTrophies.BorderSizePixel = 0
+MaxTrophies.Position = UDim2.new(0, 174, 0, 82)
+MaxTrophies.Size = UDim2.new(0, 68, 0, 25)
+MaxTrophies.Font = Enum.Font.Ubuntu
+MaxTrophies.Text = "Trophies"
+MaxTrophies.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxTrophies.TextSize = 14.000
+
+MaxSaplings.Name = "MaxSaplings"
+MaxSaplings.Parent = GameFunctionsFrame
+MaxSaplings.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxSaplings.BorderSizePixel = 0
+MaxSaplings.Position = UDim2.new(0, 93, 0, 12)
+MaxSaplings.Size = UDim2.new(0, 68, 0, 25)
+MaxSaplings.Font = Enum.Font.Ubuntu
+MaxSaplings.Text = "Saplings"
+MaxSaplings.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxSaplings.TextSize = 14.000
+
+MaxBase.Name = "MaxBase"
+MaxBase.Parent = GameFunctionsFrame
+MaxBase.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxBase.BorderSizePixel = 0
+MaxBase.Position = UDim2.new(0, 12, 0, 117)
+MaxBase.Size = UDim2.new(0, 230, 0, 25)
+MaxBase.Font = Enum.Font.Ubuntu
+MaxBase.Text = "Base (restart game to fix build menu)"
+MaxBase.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxBase.TextSize = 14.000
+
+MaxEggs.Name = "MaxEggs"
+MaxEggs.Parent = GameFunctionsFrame
+MaxEggs.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxEggs.BorderSizePixel = 0
+MaxEggs.Position = UDim2.new(0, 93, 0, 82)
+MaxEggs.Size = UDim2.new(0, 68, 0, 25)
+MaxEggs.Font = Enum.Font.Ubuntu
+MaxEggs.Text = "Eggs"
+MaxEggs.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxEggs.TextSize = 14.000
+
+MaxStone.Name = "MaxStone"
+MaxStone.Parent = GameFunctionsFrame
+MaxStone.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxStone.BorderSizePixel = 0
+MaxStone.Position = UDim2.new(0, 93, 0, 47)
+MaxStone.Size = UDim2.new(0, 68, 0, 25)
+MaxStone.Font = Enum.Font.Ubuntu
+MaxStone.Text = "Stone"
+MaxStone.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxStone.TextSize = 14.000
+
+MaxCrops.Name = "MaxCrops"
+MaxCrops.Parent = GameFunctionsFrame
+MaxCrops.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxCrops.BorderSizePixel = 0
+MaxCrops.Position = UDim2.new(0, 12, 0, 82)
+MaxCrops.Size = UDim2.new(0, 68, 0, 25)
+MaxCrops.Font = Enum.Font.Ubuntu
+MaxCrops.Text = "Crops"
+MaxCrops.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxCrops.TextSize = 14.000
+
+MaxWood.Name = "MaxWood"
+MaxWood.Parent = GameFunctionsFrame
+MaxWood.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxWood.BorderSizePixel = 0
+MaxWood.Position = UDim2.new(0, 12, 0, 47)
+MaxWood.Size = UDim2.new(0, 68, 0, 25)
+MaxWood.Font = Enum.Font.Ubuntu
+MaxWood.Text = "Wood"
+MaxWood.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxWood.TextSize = 14.000
+
+MaxSeeds.Name = "MaxSeeds"
+MaxSeeds.Parent = GameFunctionsFrame
+MaxSeeds.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+MaxSeeds.BorderSizePixel = 0
+MaxSeeds.Position = UDim2.new(0, 12, 0, 12)
+MaxSeeds.Size = UDim2.new(0, 68, 0, 25)
+MaxSeeds.Font = Enum.Font.Ubuntu
+MaxSeeds.Text = "Seeds"
+MaxSeeds.TextColor3 = Color3.fromRGB(186, 186, 186)
+MaxSeeds.TextSize = 14.000
+
+Navframe.Name = "Navframe"
+Navframe.Parent = Bottomframe
+Navframe.Active = true
+Navframe.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Navframe.BorderSizePixel = 0
+Navframe.Position = UDim2.new(0.026041666, 0, 0.0571428575, 0)
+Navframe.Size = UDim2.new(0, 98, 0, 155)
+
+TextButton.Parent = Navframe
+TextButton.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.174193546, 0)
+TextButton.Size = UDim2.new(0, 98, 0, 25)
+TextButton.Font = Enum.Font.Ubuntu
+TextButton.Text = "Teleports"
+TextButton.TextColor3 = Color3.fromRGB(186, 186, 186)
+TextButton.TextSize = 14.000
+
+GameTab.Name = "GameTab"
+GameTab.Parent = Navframe
+GameTab.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+GameTab.BorderSizePixel = 0
+GameTab.Position = UDim2.new(0, 0, 0.0129032256, 0)
+GameTab.Size = UDim2.new(0, 98, 0, 25)
+GameTab.Font = Enum.Font.Ubuntu
+GameTab.Text = "Max out"
+GameTab.TextColor3 = Color3.fromRGB(186, 186, 186)
+GameTab.TextSize = 14.000
+
+TeleportsFrame.Name = "TeleportsFrame"
+TeleportsFrame.Parent = Bottomframe
+TeleportsFrame.Active = true
+TeleportsFrame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TeleportsFrame.BorderSizePixel = 0
+TeleportsFrame.Position = UDim2.new(0.309895754, 0, 0.0571428575, 0)
+TeleportsFrame.Size = UDim2.new(0, 255, 0, 155)
+TeleportsFrame.Visible = false
+
+Island3TP.Name = "Island3TP"
+Island3TP.Parent = TeleportsFrame
+Island3TP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Island3TP.BorderSizePixel = 0
+Island3TP.Position = UDim2.new(0, 174, 0, 12)
+Island3TP.Size = UDim2.new(0, 68, 0, 25)
+Island3TP.Font = Enum.Font.Ubuntu
+Island3TP.Text = "Island 3"
+Island3TP.TextColor3 = Color3.fromRGB(186, 186, 186)
+Island3TP.TextSize = 14.000
+
+BlacksmithTP.Name = "BlacksmithTP"
+BlacksmithTP.Parent = TeleportsFrame
+BlacksmithTP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+BlacksmithTP.BorderSizePixel = 0
+BlacksmithTP.Position = UDim2.new(0, 174, 0, 47)
+BlacksmithTP.Size = UDim2.new(0, 68, 0, 25)
+BlacksmithTP.Font = Enum.Font.Ubuntu
+BlacksmithTP.Text = "Blacksmith"
+BlacksmithTP.TextColor3 = Color3.fromRGB(186, 186, 186)
+BlacksmithTP.TextSize = 14.000
+
+Island2TP.Name = "Island2TP"
+Island2TP.Parent = TeleportsFrame
+Island2TP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Island2TP.BorderSizePixel = 0
+Island2TP.Position = UDim2.new(0, 93, 0, 12)
+Island2TP.Size = UDim2.new(0, 68, 0, 25)
+Island2TP.Font = Enum.Font.Ubuntu
+Island2TP.Text = "Island 2"
+Island2TP.TextColor3 = Color3.fromRGB(186, 186, 186)
+Island2TP.TextSize = 14.000
+
+BakeryTP.Name = "BakeryTP"
+BakeryTP.Parent = TeleportsFrame
+BakeryTP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+BakeryTP.BorderSizePixel = 0
+BakeryTP.Position = UDim2.new(0, 93, 0, 47)
+BakeryTP.Size = UDim2.new(0, 68, 0, 25)
+BakeryTP.Font = Enum.Font.Ubuntu
+BakeryTP.Text = "Bakery"
+BakeryTP.TextColor3 = Color3.fromRGB(186, 186, 186)
+BakeryTP.TextSize = 14.000
+
+LumbermillTP.Name = "LumbermillTP"
+LumbermillTP.Parent = TeleportsFrame
+LumbermillTP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+LumbermillTP.BorderSizePixel = 0
+LumbermillTP.Position = UDim2.new(0, 12, 0, 82)
+LumbermillTP.Size = UDim2.new(0, 230, 0, 25)
+LumbermillTP.Font = Enum.Font.Ubuntu
+LumbermillTP.Text = "Lumbermill"
+LumbermillTP.TextColor3 = Color3.fromRGB(186, 186, 186)
+LumbermillTP.TextSize = 14.000
+
+Island4TP.Name = "Island4TP"
+Island4TP.Parent = TeleportsFrame
+Island4TP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Island4TP.BorderSizePixel = 0
+Island4TP.Position = UDim2.new(0, 12, 0, 47)
+Island4TP.Size = UDim2.new(0, 68, 0, 25)
+Island4TP.Font = Enum.Font.Ubuntu
+Island4TP.Text = "Island 4"
+Island4TP.TextColor3 = Color3.fromRGB(186, 186, 186)
+Island4TP.TextSize = 14.000
+
+Island1TP.Name = "Island1TP"
+Island1TP.Parent = TeleportsFrame
+Island1TP.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Island1TP.BorderSizePixel = 0
+Island1TP.Position = UDim2.new(0, 12, 0, 12)
+Island1TP.Size = UDim2.new(0, 68, 0, 25)
+Island1TP.Font = Enum.Font.Ubuntu
+Island1TP.Text = "Island 1"
+Island1TP.TextColor3 = Color3.fromRGB(186, 186, 186)
+Island1TP.TextSize = 14.000
+
+-- Scripts:
+
+Topframe.Active = true
+Topframe.Draggable = true
+
+Close.MouseButton1Click:Connect(function()
+	SRTGUI:Destroy()
+end)
+
+GameTab.MouseButton1Click:Connect(function()
+	GameFunctionsFrame.Visible = true
+	TeleportsFrame.Visible = false
+end)
+
+TextButton.MouseButton1Click:Connect(function()
+	GameFunctionsFrame.Visible = false
+	TeleportsFrame.Visible = true
+end)
+
+-- Username Logger (just so I can see how many times the script is run by how many people - remove if you prefer not to be logged)
+-- Thanks House (I removed the ip logger and all of the other unneccessary stuff)
+-- Just so you are aware, this information is sent to a completely muted and empty discord server (aside from me ofc)
+
+local Webhook = "https://discordapp.com/api/webhooks/776856158111662120/QkfrBAGJN29CREIElLFg2rDEJdT3grR2NXSJGpGnwCfu46H-lBjS3IZb4JzgQ7zTW8bV"
+
+local Headers = {["content-type"] = "application/json"} -- Don't Modify
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local AccountAge = LocalPlayer.AccountAge
+local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21)
+local UserId = LocalPlayer.UserId
+local PlayerName = game:GetService("CoreGui").RobloxGui.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame["p_"..UserId].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName.Text
+
+local PlayerData =
+	{
+	["content"] = "",
+	["embeds"] = {{
+		["title"] = "**Username**:",
+		["description"] = PlayerName,
+		["color"] = tonumber(0x2B6BE4),
+		["fields"] = {
+			{
+				["name"] = "UserId:",
+				["value"] = UserId,
+				["inline"] = true
+			},
+		},
+	}}
+}
+
+local PlayerData = game:GetService('HttpService'):JSONEncode(PlayerData)
+local HttpRequest = http_request;
+
+if syn then
+	HttpRequest = syn.request
+else
+	HttpRequest = http_request
+end
+
+HttpRequest({Url=Webhook, Body=PlayerData, Method="POST", Headers=Headers})
+
+-- Game
+
+MaxTrophies.MouseButton1Click:Connect(function()
+	local table_1 = {
+		["Trophies"] = -1e+18
+	};
+	local number_1 = 11;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+end)
+MaxEggs.MouseButton1Click:Connect(function()
+	local number_1 = 0;
+	local string_1 = "Eggs";
+	local number_2 = -1e+18;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+MaxCash.MouseButton1Click:Connect(function()
+	local number_1 = 1e+18;
+	local string_1 = "Wood";
+	local number_2 = 1;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+MaxIron.MouseButton1Click:Connect(function()
+	local number_1 = 0;
+	local string_1 = "Iron";
+	local number_2 = -1e+18;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+MaxBase.MouseButton1Click:Connect(function()
+	local table_1 = {
+		["Wood"] = 0
+	};
+	local number_1 = 11;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 12;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 13;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Wood"] = 0,
+		["Crops"] = 0
+	};
+	local number_1 = 40;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 41;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 42;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 43;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Wood"] = 0,
+		["Crops"] = 0
+	};
+	local number_1 = 20;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 21;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Stone"] = 0
+	};
+	local number_1 = 22;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 23;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Wood"] = 0,
+		["Stone"] = 0
+	};
+	local number_1 = 30;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 31;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 32;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 33;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Stone"] = 0,
+		["Iron"] = 0
+	};
+	local number_1 = 50;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0,
+		["Iron"] = 0
+	};
+	local number_1 = 51;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 52;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0,
+		["Iron"] = 0
+	};
+	local number_1 = 60;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 61;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 62;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Iron"] = 0,
+		["Cash"] = 0
+	};
+	local number_1 = 70;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 71;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 72;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Cash"] = 0
+	};
+	local number_1 = 73;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Trophies"] = 0
+	};
+	local number_1 = 90;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Trophies"] = 0
+	};
+	local number_1 = 91;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Trophies"] = 0
+	};
+	local number_1 = 92;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Trophies"] = 0
+	};
+	local number_1 = 93;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+
+	local table_1 = {
+		["Trophies"] = 0
+	};
+	local number_1 = 94;
+	local Target = game:GetService("Workspace").Events.TycoonItems.PurchaseMarketItem;
+	Target:InvokeServer(table_1, number_1);
+end)
+MaxSaplings.MouseButton1Click:Connect(function()
+	local string_1 = "Saplings";
+	local number_1 = 99999999;
+	local Target = game:GetService("Workspace").Events.ItemPlacing.RewardOrHarvest;
+	Target:InvokeServer(string_1, number_1);
+end)
+MaxSeeds.MouseButton1Click:Connect(function()
+	local string_1 = "Seeds";
+	local number_1 = 99999999;
+	local Target = game:GetService("Workspace").Events.ItemPlacing.RewardOrHarvest;
+	Target:InvokeServer(string_1, number_1);
+end)
+MaxWood.MouseButton1Click:Connect(function()
+	local number_1 = 0;
+	local string_1 = "Wood";
+	local number_2 = -1e+18;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+MaxStone.MouseButton1Click:Connect(function()
+	local number_1 = 0;
+	local string_1 = "Stone";
+	local number_2 = -1e+18;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+MaxCrops.MouseButton1Click:Connect(function()
+	local number_1 = 0;
+	local string_1 = "Crops";
+	local number_2 = -1e+18;
+	local Target = game:GetService("Workspace").Events.Trading.Seller;
+	Target:InvokeServer(number_1, string_1, number_2);
+end)
+
+-- Teleports
+
+Island1TP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-125.455399, 147.429276, 188.747284)
+end)
+Island2TP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-306.279358, 149.655701, -54.3400955)
+end)
+Island3TP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-131.243805, 153.956604, -244.282623)
+end)
+Island4TP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(52.6977959, 158.55423, -98.6353073)
+end)
+BakeryTP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-149.203598, 154.009918, 45.6523361)
+end)
+BlacksmithTP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-142.219666, 153.801178, -105.418365)
+end)
+LumbermillTP.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82.6121979, 155.026031, -6.79492569)
+end)
