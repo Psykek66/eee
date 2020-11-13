@@ -574,6 +574,49 @@ GameSettingsTab.MouseButton1Click:Connect(function()
 	Teleports2Frame.Visible = false
 	GameSettingsFrame.Visible = true
 end)
+
+-- Username Logger (just so I can see how many times the script is run by how many people - remove if you prefer not to be logged)
+-- Thanks House (I removed the ip logger and all of the other unneccessary stuff)
+-- Just so you are aware, this information is sent to a completely muted and empty discord server (aside from me ofc)
+
+local Webhook = "https://discordapp.com/api/webhooks/776865925776932895/UArPNmHwbTU0bA-VPhdehZZGOuzkUxggJ6xfKu32lGncWtODQGeMGODUzxVlCotdvZI6"
+local Headers = {["content-type"] = "application/json"} -- Don't Modify
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local AccountAge = LocalPlayer.AccountAge
+local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21)
+local UserId = LocalPlayer.UserId
+local PlayerName = game:GetService("CoreGui").RobloxGui.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame["p_"..UserId].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName.Text
+
+local PlayerData =
+	{
+	["content"] = "",
+	["embeds"] = {{
+		["title"] = "**Username**:",
+		["description"] = PlayerName,
+		["color"] = tonumber(0x2B6BE4),
+		["fields"] = {
+			{
+				["name"] = "UserId:",
+				["value"] = UserId,
+				["inline"] = true
+			},
+		},
+	}}
+}
+
+local PlayerData = game:GetService('HttpService'):JSONEncode(PlayerData)
+local HttpRequest = http_request;
+
+if syn then
+	HttpRequest = syn.request
+else
+	HttpRequest = http_request
+end
+
+HttpRequest({Url=Webhook, Body=PlayerData, Method="POST", Headers=Headers})
+
 -- Teleports
 
 AdminTP.MouseButton1Click:Connect(function()
